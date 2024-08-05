@@ -270,7 +270,7 @@ EXPOSE 3001
 # Comando para rodar a aplicação
 CMD [ "npm", "start" ]
 
-# TOKEN MD% HASH GENERATOR
+# TOKEN MD5 HASH GENERATOR
 
 ir no site e usar um nome para ser o token e ele vira em tag hash aleatoria
 
