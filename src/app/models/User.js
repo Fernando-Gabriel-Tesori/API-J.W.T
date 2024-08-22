@@ -1,18 +1,18 @@
-import { Model, DataTypes } from 'sequelize';
+import Sequelize, { Model } from 'sequelize';
 import bcrypt from 'bcrypt'; 
 
 class User extends Model {
     static init(sequelize) {
         super.init(
             {
-                name: DataTypes.STRING,
-                email: DataTypes.STRING,
+                name: Sequelize.STRING,
+                email: Sequelize.STRING,
                 password: {
-                    type: DataTypes.VIRTUAL,
+                    type: Sequelize.VIRTUAL,
                     allowNull: false,
                 },
-                password_hash: DataTypes.STRING,
-                admin: DataTypes.BOOLEAN,
+                password_hash: Sequelize.STRING,
+                admin: Sequelize.BOOLEAN,
             },
             {
                 sequelize,

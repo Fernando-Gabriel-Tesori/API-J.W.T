@@ -3,8 +3,8 @@ import mongoose from 'mongoose';
 const OrderSchema = new mongoose.Schema({
   user: {
     id: {
-      type: mongoose.Schema.Types.ObjectId, // Tipo correto para referência a outro documento
-      ref: 'User', // Certifique-se de que a referência está correta
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
       required: true,
     },
     name: {
@@ -15,8 +15,8 @@ const OrderSchema = new mongoose.Schema({
   products: [
     {
       id: {
-        type: mongoose.Schema.Types.ObjectId, // Use ObjectId se referenciar outro documento
-        ref: 'Product', // Certifique-se de que a referência está correta
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Product',
         required: true,
       },
       name: {
@@ -36,7 +36,7 @@ const OrderSchema = new mongoose.Schema({
         required: true,
       },
       quantity: {
-        type: Number, 
+        type: Number,
         required: true,
       },
     },
